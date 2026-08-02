@@ -23,6 +23,7 @@ We can enact policies in Prussia.
 - @unban_rfb: Reverse the <span style="color: #8B0000;">**RFB**</span> ban.
 - @ban_sh: Ban the <span style="color: #3E88B3;">**Stahlhelm**</span>, the Nationalist paramilitary.
 - @unban_sh: Reverse the <span style="color: #3E88B3;">**Stahlhelm**</span> ban.
+- @something: WIP.
 - @negotiate_concordat: Negotiate a concordat with the Vatican.
 - @sign_concordat: Sign a concordat with the Vatican.
 - @root: No new policies are needed.
@@ -80,6 +81,10 @@ view-if: sh_banned = 1
 on-arrival: sh_banned = 0; sh_strength += 100; coup_progress += 2 if sh_coup_progress >= 6; hindenburg_angry -= 5
 
 The <span style="color: #3E88B3;">**Stahlhelm**</span> is no longer banned.
+
+@something
+
+Using our governorance in Prussia, we implement a limited version of the WTB plan.
 
 
 @ban_rfb
