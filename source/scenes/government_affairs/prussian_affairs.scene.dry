@@ -83,7 +83,7 @@ on-arrival: sh_banned = 0; sh_strength += 100; coup_progress += 2 if sh_coup_pro
 The <span style="color: #3E88B3;">**Stahlhelm**</span> is no longer banned.
 
 @something
-on-arrival: prussian_police_strength += 5
+on-arrival: workers_spd += 5*(1.25-dissent); workers_spd -= 1 if unemployed >= 20; workers_spd -= 1 if unemployed >= 30; workers_spd += 3*(1.25-dissent)
 
 Using our governorance in Prussia, we implement a limited version of the WTB plan.
 
