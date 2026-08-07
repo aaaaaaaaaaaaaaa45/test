@@ -24,7 +24,7 @@ on-arrival: workers_spd += 4*(1-dissent); unemployed_spd += 2*(1-dissent); panze
 Our catchy slogan has helped rally the workers’ vote and limit defections to the <span style="color: #700000;">**KPD**</span>.
 
 @eat_ship
-on-arrival: workers_spd += 9*(1.6-dissent); unemployed_spd += 5*(1.6-dissent); panzerkreuzer_campaign = 1
+on-arrival: workers_spd += 9*(1-dissent); unemployed_spd += 5*(1-dissent); panzerkreuzer_campaign = 1
 
 Eating the ship is an unusual move, but surprisingly gains support from many.
 
