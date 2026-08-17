@@ -14,6 +14,7 @@ The Reichswehr Ministry is demanding the construction of a new battlecruiser, as
 [? if not panzerkreuzer_campaign: Our lack of an electoral campaign against the ship's construction will limit the backlash among our working-class base. ?][? if panzerkreuzer_campaign: We campaigned on food for children instead of battlecruisers. Will we really betray our campaign promises? ?]
 
 - @vote_yes: Vote yes, for constructing the battlecruiser.
+- @vote_eat: Vote eat, for eating the battlecruiser.
 - @vote_no: Vote no, against constructing the battlecruiser.
 - @abstain: Abstain from the vote.
 
@@ -23,6 +24,11 @@ on-arrival: left_dissent += 10; labor_dissent += 5; center_dissent += 5; reformi
 Our grassroots party members are shocked by our intransigence! Many party branches have begun agitating against the cabinet, and our Reichstag members even plan a full vote on the proposal, contravening the government's decision. [? if panzerkreuzer_campaign: Our working-class base feels betrayed—we had promised to block the ship’s construction and fund children’s meals instead. ?]
 
 The campaign against the battlecruiser fails, with only the dissident <span style="color: #c00000;">**SPD**</span> and <span style="color: #700000;">**KPD**</span> members voting against. The ship will be built.
+
+@vote_eat
+on-arrival: dvp_relation -= 4; lvp_relation -= 6; z_relation -= 6; coalition_dissent += 2; workers_spd += 2; unemployed_spd += 4
+
+Our memebers are supportive of the idea but our coalition is not.
 
 @vote_no
 on-arrival: dvp_relation -= 8; lvp_relation -= 5; z_relation -= 5; pacifism += 1; nationalism -= 2*(1-dissent); coalition_dissent += 1; dvp_right += 1; ddp_left += 1; ddp_cohesion -= 1; lvp_right += 1; hindenburg_angry += 5; panzerkreuzer_no = 1;
