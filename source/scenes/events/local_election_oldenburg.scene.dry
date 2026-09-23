@@ -604,6 +604,7 @@ The incumbent coalition has failed to win a majority, and toleration from the <s
 
 Despite the exclusion of many supporting parties from the cabinet in favor of non-partisan figures, they choose to tolerate the coalition nonetheless.
 
+
 @grand_coalition_oldenburg
 title: A [? if lvp_formed and stegerwald_path: <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span>?][? if not lvp_formed or not stegerwald_path: Grand?] Coalition is formed!
 subtitle: We have somehow reconciled with the bourgeois parties, that they're willing to govern with us again.
