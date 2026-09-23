@@ -438,7 +438,6 @@ if (window && d3) {
     d3.select("#oldenburg_landtag").datum(data).call(parliament);
 }
 !}
-go-to: oldenburg_achievement
 
 **oldenburg results:**
 
