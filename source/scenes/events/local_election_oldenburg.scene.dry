@@ -559,7 +559,7 @@ if (((Q.z_relation >= 45 || !Q.stegerwald_path) && ((Q.dvp_relation >= (dvp_tole
 } else {
     Q.groko_coalition_possible_oldenburg = 0;
 }
-if (((Q.z_relation >= 50 || !Q.stegerwald_path) {
+if (Q.z_relation >= 50 || !Q.stegerwald_path) {
     Q.weimar_coalition_possible_oldenburg = 1;
 } else {
     Q.weimar_coalition_possible_oldenburg = 0;
