@@ -234,8 +234,6 @@ Q.wp_r_oldenburg = Q.other_r_oldenburg*wp_share;
 Q.vrp_oldenburg_elections_vote = Q.other_oldenburg_elections_vote*vrp_share;
 Q.vrp_r_oldenburg = Q.other_r_oldenburg*vrp_share;
 
-Q.kpo_oldenburg_elections_vote = Q.kpd_oldenburg_elections_vote*0.06
-Q.kpd_oldenburg_elections_vote -= Q.kpo_oldenburg_elections_vote;
 
 function allocateSeats(percentages, totalSeats = 48) {
     const exactSeats = {};
@@ -299,7 +297,6 @@ Q.weimar_coalition_oldenburg = parseFloat((Q.spd_r_oldenburg + Q.z_r_oldenburg +
 Q.farm_oldenburg_elections_vote = (Q.farm_oldenburg_elections_vote != undefined ? parseFloat(Q.farm_oldenburg_elections_vote.toFixed(1)) : 0);
 Q.wp_oldenburg_elections_vote = (Q.wp_oldenburg_elections_vote != undefined ? parseFloat(Q.wp_oldenburg_elections_vote.toFixed(1)) : 0);
 Q.vrp_oldenburg_elections_vote = (Q.vrp_oldenburg_elections_vote != undefined ? parseFloat(Q.vrp_oldenburg_elections_vote.toFixed(1)) : 0);
-Q.kpo_oldenburg_elections_vote = (Q.kpo_oldenburg_elections_vote != undefined ? parseFloat(Q.kpo_oldenburg_elections_vote.toFixed(1)) : 0);
 Q.kpd_oldenburg_elections_vote = (Q.kpd_oldenburg_elections_vote != undefined ? parseFloat(Q.kpd_oldenburg_elections_vote.toFixed(1)) : 0);
 Q.spd_oldenburg_elections_vote = (Q.spd_oldenburg_elections_vote != undefined ? parseFloat(Q.spd_oldenburg_elections_vote.toFixed(1)) : 0);
 Q.farm_r_oldenburg = (Q.farm_r_oldenburg != undefined ? parseFloat(Q.farm_r_oldenburg.toFixed(1)) : 0);
@@ -455,8 +452,6 @@ go-to: oldenburg_achievement
 
 {!<tr><td><div class="box" style='background-color:#700000'> </div> !}KPD: {!</td><td>!} [+ kpd_oldenburg_elections_vote +]% {!</td><td>!} [+ kpd_r_oldenburg +]%  {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#C43988'> </div> !}KPO: {!</td><td>!} [+ kpo_oldenburg_elections_vote +]% {!</td><td>!} 0%  {!</td></tr>!}
-
 [? if not lvp_formed: {!<tr><td><div class="box" style='background-color:#D3C24D'> </div> !} [+ ddp_name +]: {!</td><td>!} [+ ddp_oldenburg_elections_vote +]% {!</td><td>!} [+ ddp_r_oldenburg +]%  {!</td></tr>!} ?]
 
 [? if lvp_formed: {!<tr><td><div class="box" style='background-color:#FFCC00'> </div> !} LVP: {!</td><td>!} [+ lvp_oldenburg_elections_vote +]% {!</td><td>!} [+ lvp_r_oldenburg +]%  {!</td></tr>!} ?]
@@ -482,7 +477,6 @@ go-to: oldenburg_achievement
 <hr id="read-marker">
 
 <hr id="read-marker">
-United Left Coalition (<span style="color: #c00000;">**SPD**</span> + <span style="color: #C43988;">**KPO**</span> + <span style="color: #700000;">**KPD**</span>[? if sapd_formed:&nbsp;+ <span style="color: #9B0000;">**SAPD**</span>?]): [+ left_coalition_oldenburg +]% 
 
 Grand Coalition (<span style="color: #c00000;">**SPD**</span> + [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?][? if z_r_oldenburg:&nbsp;+&nbsp;<span style="color: #000000;">**[+ z_party_name +]**</span> ?][? if not lvp_formed:&nbsp;+&nbsp;<span style="color: #C0A054;">**DVP**</span>?]): [+ groko_coalition_oldenburg +]% 
 
