@@ -29,13 +29,13 @@ The Oldenburg state elections are to be held now.
 on-arrival: {!
 
 var oldenburg_adjustment_factors = {
-    spd: 0.8,
-    sapd: 1.0,
-    kpd: 0.8,
+    spd: 0.9,
+    sapd: 0.8,
+    kpd: 0.6,
     ddp: 1.3,
     lvp: 1.3,
-    z: 0.7,
-    dvp: 1.3,
+    z: 1.2,
+    dvp: 1.05,
     dnvp: 1.2,
     nsdap: 1.6,
     other: 1.2,
