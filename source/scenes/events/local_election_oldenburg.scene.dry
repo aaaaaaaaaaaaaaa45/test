@@ -37,7 +37,7 @@ var oldenburg_adjustment_factors = {
     z: 1.3,
     dvp: 1.05,
     dnvp: 1.2,
-    nsdap: 1.6,
+    nsdap: 8.5,
     other: 1.2,
     kvp: 1.1,
     dnf: 0.8
