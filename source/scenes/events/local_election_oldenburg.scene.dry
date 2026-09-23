@@ -32,7 +32,7 @@ var oldenburg_adjustment_factors = {
     spd: 0.9,
     sapd: 0.8,
     kpd: 0.6,
-    ddp: 1.35,
+    ddp: 1.5,
     lvp: 1.25,
     z: 1.3,
     dvp: 1.05,
@@ -150,7 +150,7 @@ var oldenburg_adjustment_r_factors = {
     spd: 0.96,
     sapd: 0.6,
     kpd: 0.8,
-    ddp: 0.9,
+    ddp: 1.05,
     lvp: 1.0,
     z: 1.05,
     dvp: 1.0,
@@ -305,8 +305,8 @@ Q.other_r_oldenburg = Q.farm_r_oldenburg + Q.wp_r_oldenburg + Q.vrp_r_oldenburg;
 
 Q.left_coalition_oldenburg = parseFloat((Q.spd_r_oldenburg + Q.kpd_r_oldenburg + Q.sapd_r_oldenburg).toFixed(1));
 Q.bourgeois_coalition_oldenburg = parseFloat((Q.aspd_r_oldenburg + Q.z_r_oldenburg + Q.ddp_r_oldenburg + Q.dvp_r_oldenburg + Q.lvp_r_oldenburg + Q.kvp_r_oldenburg + Q.other_r_oldenburg + Q.dnvp_r_oldenburg + Q.nsdap_r_oldenburg).toFixed(1));
-Q.groko_coalition_oldenburg = parseFloat((Q.spd_r_oldenburg + Q.z_r_oldenburg + q.ddp_r_oldenburg + q.dvp_r_oldenburg).toFixed(1));
-Q.weimar_coalition_oldenburg = parseFloat((Q.spd_r_oldenburg + Q.z_r_oldenburg + q.ddp_r_oldenburg).toFixed(1));
+Q.groko_coalition_oldenburg = parseFloat((Q.spd_r_oldenburg + Q.z_r_oldenburg + Q.ddp_r_oldenburg + Q.dvp_r_oldenburg).toFixed(1));
+Q.weimar_coalition_oldenburg = parseFloat((Q.spd_r_oldenburg + Q.z_r_oldenburg + Q.ddp_r_oldenburg).toFixed(1));
 
 
 Q.farm_oldenburg_elections_vote = (Q.farm_oldenburg_elections_vote != undefined ? parseFloat(Q.farm_oldenburg_elections_vote.toFixed(1)) : 0);
