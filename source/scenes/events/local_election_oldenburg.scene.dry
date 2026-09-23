@@ -289,7 +289,7 @@ for (const party in allocatedSeats) {
 Q.other_r_oldenburg = Q.farm_r_oldenburg + Q.wp_r_oldenburg + Q.vrp_r_oldenburg;
 
 Q.left_coalition_oldenburg = parseFloat((Q.spd_r_oldenburg + Q.kpd_r_oldenburg + Q.sapd_r_oldenburg).toFixed(1));
-Q.bourgeois_coalition_oldenburg = parseFloat( Q.z_r_oldenburg + Q.ddp_r_oldenburg + Q.dvp_r_oldenburg + Q.lvp_r_oldenburg + Q.kvp_r_oldenburg + Q.other_r_oldenburg + Q.dnvp_r_oldenburg + Q.nsdap_r_oldenburg).toFixed(1));
+Q.bourgeois_coalition_oldenburg = parseFloat((Q.z_r_oldenburg + Q.ddp_r_oldenburg + Q.dvp_r_oldenburg + Q.lvp_r_oldenburg + Q.kvp_r_oldenburg + Q.other_r_oldenburg + Q.dnvp_r_oldenburg + Q.nsdap_r_oldenburg).toFixed(1));
 Q.groko_coalition_oldenburg = parseFloat((Q.spd_r_oldenburg + Q.z_r_oldenburg + Q.ddp_r_oldenburg + Q.dvp_r_oldenburg).toFixed(1));
 Q.weimar_coalition_oldenburg = parseFloat((Q.spd_r_oldenburg + Q.z_r_oldenburg + Q.ddp_r_oldenburg).toFixed(1));
 
