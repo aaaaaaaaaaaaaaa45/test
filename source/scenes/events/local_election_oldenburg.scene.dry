@@ -1,4 +1,4 @@
-title: oldenburg Landtag Election
+title: Oldenburg Landtag Election
 view-if: (year == 1928 and month == 5 and not oldenburg_election_seen) or (oldenburg_election_2_trigger_time == time and oldenburg_election_seen_time != time)
 new-page: true
 tags: event
@@ -32,9 +32,9 @@ var oldenburg_adjustment_factors = {
     spd: 0.9,
     sapd: 0.8,
     kpd: 0.6,
-    ddp: 1.3,
-    lvp: 1.3,
-    z: 1.2,
+    ddp: 1.35,
+    lvp: 1.25,
+    z: 1.3,
     dvp: 1.05,
     dnvp: 1.2,
     nsdap: 1.6,
@@ -147,10 +147,10 @@ if (Q.kvp_oldenburg_elections_vote >= 1.4) Q.kvp_r_oldenburg = Q.kvp_oldenburg_e
 if (Q.dnf_oldenburg_elections_vote >= 1.4) Q.dnf_r_oldenburg = Q.dnf_oldenburg_elections_vote;
 
 var oldenburg_adjustment_r_factors = {
-    spd: 1.0,
-    sapd: 1.0,
-    kpd: 0.98,
-    ddp: 0.48,
+    spd: 0.96,
+    sapd: 0.6,
+    kpd: 0.8,
+    ddp: 0.9,
     lvp: 1.0,
     z: 1.05,
     dvp: 1.0,
@@ -510,7 +510,7 @@ go-to: oldenburg_achievement
 <hr id="read-marker">
 United Left Coalition (<span style="color: #c00000;">**SPD**</span> + <span style="color: #C43988;">**KPO**</span> + <span style="color: #700000;">**KPD**</span>[? if sapd_formed:&nbsp;+ <span style="color: #9B0000;">**SAPD**</span>?]): [+ left_coalition_oldenburg +]% 
 
-Grand Coalition (<span style="color: #c00000;">**SPD**</span> + <span style="color: #fe9e00;">**ASPD**</span> + [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?][? if z_r_oldenburg:&nbsp;+&nbsp;<span style="color: #000000;">**[+ z_party_name +]**</span> ?][? if not lvp_formed:&nbsp;+&nbsp;<span style="color: #C0A054;">**DVP**</span>?]): [+ groko_oldenburg +]% 
+Grand Coalition (<span style="color: #c00000;">**SPD**</span> + [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?][? if z_r_oldenburg:&nbsp;+&nbsp;<span style="color: #000000;">**[+ z_party_name +]**</span> ?][? if not lvp_formed:&nbsp;+&nbsp;<span style="color: #C0A054;">**DVP**</span>?]): [+ groko_oldenburg +]% 
 
 Weimar Coalition (<span style="color: #c00000;">**SPD**</span> + <span style="color: #fe9e00;">**ASPD**</span> + [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?][? if z_r_oldenburg:&nbsp;+&nbsp;<span style="color: #000000;">**[+ z_party_name +]**</span> ?][? if not lvp_formed:&nbsp;+&nbsp;<span style="color: #C0A054;">**DVP**</span>?]): [+ weimar_oldenburg +]% 
 
