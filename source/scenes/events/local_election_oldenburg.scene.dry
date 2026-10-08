@@ -207,9 +207,6 @@ if (Q.total_r_oldenburg > 0) {
 }
 
 
-Q.spd_oldenburg_elections_vote = Q.spd_oldenburg_elections_vote*spd_share;
-Q.spd_r_oldenburg = Q.spd_r_oldenburg*spd_share;
-
 
 let farm_share = 0.27;
 if (Q.dnvp_ideology == "Moderate") farm_share -= 0.1;
@@ -481,10 +478,10 @@ Grand Coalition (<span style="color: #c00000;">**SPD**</span> + [? if not lvp_fo
 
 Weimar Coalition (<span style="color: #c00000;">**SPD**</span> + [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?][? if z_r_oldenburg:&nbsp;+&nbsp;<span style="color: #000000;">**[+ z_party_name +]**</span> ?][? if not lvp_formed:&nbsp;+&nbsp;<span style="color: #C0A054;">**DVP**</span>?]): [+ weimar_coalition_oldenburg +]% 
 
-Bourgeois Coalition ([? if z_r_oldenburg: <span style="color: #000000;">**[+ z_party_name +]**</span> + ?][? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span> + <span style="color: #C0A054;">**DVP**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?] + <span style="color: #11DD11;">**SLV**</span> + <span style="color: #b8948f;">**WP**</span> + <span style="color: #0075EB;">**VRP**</span>[? if kvp_formed:&nbsp;+ <span style="color: #0087DC;">**KVP**</span> ?] + <span style="color: #3E88B3;">**DNVP**</span>): [+ true_bourgeois_coalition_oldenburg +]%
+Bourgeois Coalition ([? if z_r_oldenburg: <span style="color: #000000;">**[+ z_party_name +]**</span> + ?][? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span> + <span style="color: #C0A054;">**DVP**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?] + <span style="color: #11DD11;">**SLV**</span> + <span style="color: #b8948f;">**WP**</span> + <span style="color: #0075EB;">**VRP**</span>[? if kvp_formed:&nbsp;+ <span style="color: #0087DC;">**KVP**</span> ?] + <span style="color: #3E88B3;">**DNVP**</span>): [+ bourgeois_coalition_oldenburg +]%
 
 
-[? if nsdap_oldenburg_elections_vote >= 8: The rise of the <span style="color: #7A3C00;">**NSDAP**</span> is quite unexpected, especially given their meager 1.6% of the vote in the last election. ?]
+[? if nsdap_oldenburg_elections_vote >= 10: The rise of the <span style="color: #7A3C00;">**NSDAP**</span> is quite unexpected, especially given their meager 1.6% of the vote in the last election. ?]
 
 go-to: oldenburg_coalition_menu
 
@@ -554,8 +551,8 @@ We have entered a toleration agreement with the bourgeois cabinet, and have made
 @bourgeois_coalition_oldenburg
 title: A bourgeois coalition is formed.
 subtitle: The incumbent coalition, which will survive on toleration from the <span style="color: #7A3C00;">**NSDAP**</span>.
-view-if: bourgeois_coalition_oldenburg >= 50 and true_bourgeois_coalition_oldenburg < 50
-on-arrival: oldenburg_right = 1; oldenburg_leader = "Bünger"; oldenburg_irl = 1
+view-if: bourgeois_coalition_oldenburg >= 50
+on-arrival: oldenburg_right = 1; oldenburg_leader = "Bünger"
 
 There is no incumbuent, Oldenburg is rather operated by a system of tolerance of various indepdent figures, with all parties from Z to the NSDAP maintaing the status quo.
 
@@ -663,4 +660,4 @@ subtitle: Sweat...
 view-if: spd_r_oldenburg >= 50 
 on-arrival: oldenburg_spd = 1; reformist_dissent -= 5; left_dissent -= 30; left_strength += 10; center_dissent -= 10; labor_dissent -= 10; aspd_dead = 1; workers_spd += 7; workers_kpd -= 4; new_middle_spd += 3; old_middle_spd += 2; unemployed_spd += 4; unemployed_nsdap -= 3; pro_republic += 5
 
-Unexpectedly, we've found ourselves controlling a majority of the Oldenburg landtag and being able to form a government of just the <span style="color: #c00000;">**SPD**</span>! It is unclear how the bourgeois and <span style="color: #808080;">reactionaries</span> will react to a <span style="color: #c00000;">Red</span> oldenburg but without the <span style="color: #700000;">**Communists**</span>... [? if aspd_share > 0: The <span style="color: #fe9e00;">**ASPD**</span> seeing as we no longer require on coalition negotiations to form government has decided to join us. ?] 
+Unexpectedly, we've found ourselves controlling a majority of the Oldenburg landtag and being able to form a government of just the <span style="color: #c00000;">**SPD**</span>! It is unclear how the bourgeois and <span style="color: #808080;">reactionaries</span> will react to a <span style="color: #c00000;">Red</span> oldenburg but without the <span style="color: #700000;">**Communists**</span>...
